@@ -1,0 +1,8 @@
+f60e0cf5c1ff33b4e38d392ac4e9d176 *DESCRIPTION
+bf23858dcda636f853be3ecfbc137372 *NAMESPACE
+7aa6296218f592576d5ec27a5593ec92 *R/describeRNA.R
+99078e165c3af64dac25728cac668114 *R/revealRNA.R
+b51c6a013ebe2291924f258a71a4c860 *inst/extdata/Rattus_Norvegicus_biomart.tsv
+9085db199294dbaede30a59058876e6e *inst/extdata/count_matrix.tsv
+ec226c608cce04c62068282614d0edfd *man/describeRNA.Rd
+7ca89c1f5dbd9d25d80fd941842a7b76 *man/revealRNA.Rd
