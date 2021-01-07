@@ -11,8 +11,7 @@ revealRNA = function (counts, biotypes, report = FALSE, verbose = FALSE)
 {
   counts = counts[grepl("^Sample", names(counts))]
   table = table(biotypes$data.gene_biotype)
-  target = c("miRNA", "protein_coding", "lincRNA", "pseudogene",
-             "snoRNA", "snRNA", "ribozyme")
+  target = c("miRNA", "protein_coding", "lincRNA", "pseudogene", "snoRNA", "snRNA", "ribozyme")
   table = data.frame(table)
   index <- table$Var1 %in% target
   barplot = table[index, ]
@@ -27,8 +26,7 @@ revealRNA = function (counts, biotypes, report = FALSE, verbose = FALSE)
     plotMDS(counts, main = "Multidimensional Scaling")
     sortbar = barplot[order(barplot$Freq, decreasing = TRUE),
     ]
-    barplot(sortbar$Freq, names.arg = sortbar$Var1, col = 1:6,
-            main = "Absolute Quantity")
+    barplot(sortbar$Freq, names.arg = sortbar$Var1, col = 1:6,main = "Absolute Quantity")
     x = t(counts)
     x = hclust(dist(x))
     plot(x, main = "Cluster Dendrogram")
@@ -36,7 +34,6 @@ revealRNA = function (counts, biotypes, report = FALSE, verbose = FALSE)
     dev.off()
   }
   if (verbose) {
-    cat("RAW TABLE")
     print(knitr::kable(table))
   }
   pos <- 1

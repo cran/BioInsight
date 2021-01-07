@@ -7,15 +7,16 @@
 #' @importFrom edgeR filterByExpr
 #' @importFrom limma plotMDS
 #' @importFrom wordcloud wordcloud
-describeRNA = function(counts, biotypes, groups, report=FALSE, verbose=FALSE, filter=1){
-  table = table(biotypes$gene_biotype)
+describeRNA = function(counts, biotypes, groups, report=FALSE, verbose=FALSE, filter=1)
+{
+  table = table(biotypes$gene_biotype, exclude=NA)
   target = c("miRNA", "protein_coding", "lincRNA","pseudogene","snoRNA","snRNA", "ribozyme")
   table = data.frame(table)
-  index <- table$Var1 %in% target
-  barplot = table[index, ]
+  index <- table$Var1 %in% target 
+  barplot = table[index, ] 
   if (report) {
-    File <- tempfile(fileext=".pdf")
-    warning("Temporary report at", File)
+    File <- tempfile(fileext=".pdf") 
+    warning("\n Temporary report at  ", File, call.=FALSE, immediate. =TRUE) 
     dir.create(dirname(File))
     pdf(File,width=15, height=15)
     oldpar <- par(no.readonly=TRUE)
@@ -43,11 +44,10 @@ describeRNA = function(counts, biotypes, groups, report=FALSE, verbose=FALSE, fi
     data_filtered = counts[data_filtered, ]
   }
   if (verbose){
-  cat("RAW TABLE")
-  print(knitr::kable(table))
-  cat("\nGENES", sep='\n')
-  cat("Total number of genes before:", nrow(counts))
-  cat("\nGenes remaining after:", dim(data_filtered)[1])
+    print(knitr::kable(table))
+    cat("\nGENES", sep='\n')
+    cat("Total number of genes:", nrow(counts))
+    cat("\nGenes remaining:", dim(data_filtered)[1])
   }
   pos <- 1
   envir = as.environment(pos)
