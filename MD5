@@ -1,8 +1,9 @@
-c94a7a63400e0aa6597c81d08b7b3897 *DESCRIPTION
-bf23858dcda636f853be3ecfbc137372 *NAMESPACE
-2db48597c9c5f52d7da446565955c534 *R/describeRNA.R
-1e87154783630c3f388c457e756a117a *R/revealRNA.R
+59d207da8ee12c9bb25b9f9576fdea9c *DESCRIPTION
+32a0ac9160afff8c8356f92497b11607 *INDEX
+2355e5bcabe3d12061e089673404cd4c *NAMESPACE
+aab79095da99f7c0e7d8acc2f2841aa1 *R/describeRNA.R
 b51c6a013ebe2291924f258a71a4c860 *inst/extdata/Rattus_Norvegicus_biomart.tsv
 9085db199294dbaede30a59058876e6e *inst/extdata/count_matrix.tsv
-ec226c608cce04c62068282614d0edfd *man/describeRNA.Rd
-7ca89c1f5dbd9d25d80fd941842a7b76 *man/revealRNA.Rd
+9e786a0aa676f5eddb3a5ee7dbbcf024 *man/describeRNA.Rd
+c7e81bf6b21b89fe94673f92b9298005 *tests/testthat.R
+46153da7e64a3039a7e87802d89a78a3 *tests/testthat/test-BioInsight.R
